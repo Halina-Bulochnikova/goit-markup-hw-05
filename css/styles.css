@@ -659,14 +659,10 @@ margin-bottom: 16px;
   top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-
 }
-
-.modal-icon {
-  fill: #2e2f42;
-  position: absolute;
-  top: 14px;
-  left: 19px;
+.name-focus:hover,
+.name-focus:focus {
+  fill: #4D5AE5;
 }
 .label-input {
   font-size: 12px;
@@ -676,29 +672,46 @@ margin-bottom: 16px;
   display: block;
   margin-bottom: 4px;
 }
+.input-icon {
+  position: relative;
+}
 .input-icon-item {
-  background-color: transparent;
-  padding-left: 38px;
   border-radius: 4px;
   width: 360px;
   height: 40px;
-  display: flex;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding-left: 38px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.input-name:hover,
+.input-name:focus {
+  border-color: #4D5AE5;
+}
 .input-block-textarea {
-  display: block;
-  flex-direction: column;
   width: 360px;
   height: 120px;
+  margin-bottom: 16px;
 }
 .textarea-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 360px;
   height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.textarea-input:hover,
+.textarea-input:focus {
+  border-color: #4D5AE5;
 }
 .textarea-input::placeholder {
   font-weight: 400;
@@ -712,10 +725,8 @@ margin-bottom: 16px;
   padding-left: 16px;
 }
 .input-checkbox-block {
-  display: flex;
-  width: 360px;
-  height: 16px;
   margin-top: 32px;
+  margin-bottom: 24px; 
 }
 .input-checkbox {
   border-radius: 2px;
@@ -723,7 +734,11 @@ margin-bottom: 16px;
   width: 16px;
   height: 16px;
   background-color: transparent;
-  display: flex;
+}
+.input-checkbox:checked + .checkbox-agree-icon span {
+  background-color: #404bbf;
+  border: none;
+  fill: #F4F4FD;
 }
 .checkbox-text {
   font-weight: 400;
@@ -733,14 +748,16 @@ margin-bottom: 16px;
   color: #8e8f99;
 }
 .checkbox-agree-icon {
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
   width: 16px;
   height: 16px;
-  margin-right: 8px;
-  display: flex;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
 }
 .agree-icon {
   fill: #f4f4fd;
@@ -751,34 +768,33 @@ margin-bottom: 16px;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
 }
-.visually-hidden:checked+.checkbox-text>.checkbox-agree-icon {
+.input-checkbox:checked+.checkbox-text>.checkbox-agree-icon {
   background-color: #404bbf;
   border: none;
 }
-.visually-hidden:checked+.checkbox-text+.checkbox-agree-icon+.agree-icon {
+.input-checkbox:checked+.checkbox-text+.checkbox-agree-icon+.agree-icon {
   fill: #f4f4fd;
 }
 .modal-btn {
   font-family: Roboto, sans-serif;
   font-weight: 500;
+  display: block;
   font-size: 16px;
+  min-width: 169px;
+  height: 56px;
   letter-spacing: 0.04em;
   line-height: 1.5;
   color: #fff;
   cursor: pointer;
   background: #4d5ae5;
-  display: block;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  gap: 10px;
   border-radius: 4px;
-  min-width: 169px;
-  height: 56px;
   margin-top: 24px;
   margin-left: auto;
   margin-right: auto;
-  boder: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
