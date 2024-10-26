@@ -652,21 +652,16 @@ margin-bottom: 16px;
   width: 360px;
   margin-bottom: 8px;
 }
-.input-icon {
-  position: relative;
-  width: 360px;
-  height: 40px;
-}
-.modal-icon-name {
+.modal-icon {
   fill: #2e2f42;
   position: absolute;
-  top: 14px;
-  left: 19px;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
 }
-.modal-icon-name:hover,
-.modal-icon-name:focus {
-  fill: #4d5ae5;
-}
+
 .modal-icon {
   fill: #2e2f42;
   position: absolute;
@@ -674,7 +669,6 @@ margin-bottom: 16px;
   left: 19px;
 }
 .label-input {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -682,24 +676,18 @@ margin-bottom: 16px;
   display: block;
   margin-bottom: 4px;
 }
-.input-name {
+.input-icon-item {
+  background-color: transparent;
+  padding-left: 38px;
   border-radius: 4px;
   width: 360px;
   height: 40px;
   display: flex;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-name:hover,
-.input-name:focus {
-  border: 1px solid #4d5ae5;
-}
-.input-tel-email {
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  width: 360px;
-  height: 40px;
-}
+
 .input-block-textarea {
   display: block;
   flex-direction: column;
