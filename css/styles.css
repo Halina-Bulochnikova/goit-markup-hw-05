@@ -619,21 +619,21 @@ input::placeholder {
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.btn-back-close:hover>,
+.btn-back-close:focus> {
+  background-color: #404bbf;
+  border: none;
+}
 .modal-icon-back {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   fill: #2e2f42;
 }
-.btn-back-close:hover,
-.btn-back-close:focus {
-  background-color: #404bbf;
-  border: none;
-  fill: #ffffff;
+
+.btn-back-close:hover>.modal-icon-back {
+  fill: #fff;
   }
-.modal-icon-back:hover,
-.modal-icon-back:focus {
-  background-color: #404bbf;
-  border: none; 
+.btn-back-close:focus>.modal-icon-back {
   fill: #fff;
 }
 .modal-head {
@@ -741,11 +741,6 @@ margin-bottom: 16px;
   height: 16px;
   background-color: transparent;
 }
-.input-checkbox:checked + .checkbox-agree-icon span {
-  background-color: #404bbf;
-  border: none;
-  fill: #F4F4FD;
-}
 .checkbox-text {
   font-weight: 400;
   font-size: 12px;
@@ -778,9 +773,7 @@ margin-bottom: 16px;
 .input-checkbox:checked+.checkbox-text>.checkbox-agree-icon {
   background-color: #404bbf;
   border: none;
-}
-.input-checkbox:checked+.checkbox-text+.checkbox-agree-icon+.agree-icon {
-  fill: #f4f4fd;
+  fill: #F4F4FD;
 }
 .modal-btn {
   font-family: Roboto, sans-serif;
